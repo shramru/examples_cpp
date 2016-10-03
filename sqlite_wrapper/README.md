@@ -1,0 +1,1 @@
+# Simple C++ wrapper around SQLite C driver
