@@ -1,0 +1,15 @@
+language: cpp
+os: linux
+compiler:
+ - g++-5
+addons:
+  apt:
+    packages:
+    - g++-5
+    - libboost-all-dev
+    sources:
+    - ubuntu-toolchain-r-test
+before_install:
+ - if [ "$CXX" = "g++" ]; then export CXX="g++-5" CC="gcc-5"; fi
+script:
+- cmake . && make
